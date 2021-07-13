@@ -15,6 +15,6 @@ for language in ["en","de","fr","es","it","ko","pt","ja"]:
         languagex[i]["d"] = data[i]['text'][language]['name']
         del languagex[i]['text']
         del languagex[i]['images']
-    json.dump(languagex,open(f"database/lang/data-{language}-min.json"),separators=(',',':'))
+    json.dump(languagex,open(f"database/lang/data-{language}-min.json","w"),separators=(',',':'))
 
 
