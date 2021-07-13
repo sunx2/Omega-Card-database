@@ -48,7 +48,7 @@ def get_link_marker(_def):
 
 class DataBase(object):
     def __init__(self):
-        self.db = sqlite3.connect("databases/OmegaDb.cdb")
+        self.db = sqlite3.connect("database/OmegaDb.cdb")
         self.cursor = self.db.cursor()
         self.template = {
             "text": {
