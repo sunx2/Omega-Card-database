@@ -18,23 +18,23 @@ jobs:
         python-version: '3.x' 
         architecture: 'x64' 
     
-        - name: Display Python version
+    - name: Display Python version
       run: python -c "import sys; print(sys.version)"
     
-      - name: Install dependencies
+    - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r modules.txt
     
-        - name: Download OmegaDB
+    - name: Download OmegaDB
       uses: wei/wget@v1
       with:
         args: -O database/OmegaDB.cdb https://duelistsunite.org/omega/OmegaDB.cdb
     
-        - name: create json
+    - name: create json
       run: python database/parse_json.py
     
-      - name: Auto commit
+    - name: Auto commit
       run: |
            git config user.name "sunx2"
            git config user.email "xxsunxxrose@gmail.com"
