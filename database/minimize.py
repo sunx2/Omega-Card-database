@@ -12,7 +12,10 @@ for language in ["en","de","fr","es","it","ko","pt","ja"]:
     for i in cards:
         try:
             languagex[i] = data[i]
-            language[i]['ban'] = [banlist[i]['TCG'],banlist[i]['OCG'],banlist[i]['TCG']]
+            try:
+                languagex[i]['ban'] = [banlist[i]['TCG'],banlist[i]['OCG'],banlist[i]['TCG']]
+            except:
+                languagex[i]['ban'] = [3,3,3]
             try:
                 languagex[i]['n'] = data[i]['text'][language]['name']
                 languagex[i]["d"] = data[i]['text'][language]['desc']
@@ -21,7 +24,7 @@ for language in ["en","de","fr","es","it","ko","pt","ja"]:
                     languagex[i]["d"] = data[i]['text']["en"]['desc']
                     languagex['notrans'] = True
         except Exception as r:
-            print(r,data[i]['text'].keys())
+            print(r,banlist[i].keys())
             break
     massive[language] = languagex
 
