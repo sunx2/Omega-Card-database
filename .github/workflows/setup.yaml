@@ -34,6 +34,8 @@ jobs:
     - name: create json
       run: python database/parse_json.py
     
+    - name: create language datasheets
+      run: python database/minimize.py
     - name: Auto commit
       run: |
            git config user.name "sunx2"
