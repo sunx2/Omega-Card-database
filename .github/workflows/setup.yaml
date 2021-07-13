@@ -29,7 +29,7 @@ jobs:
     - name: Download OmegaDB
       uses: wei/wget@v1
       with:
-        args: -O database/OmegaDB.cdb https://duelistsunite.org/omega/OmegaDB.cdb
+        args: -O database/OmegaDb.cdb https://duelistsunite.org/omega/OmegaDB.cdb
     
     - name: create json
       run: python database/parse_json.py
