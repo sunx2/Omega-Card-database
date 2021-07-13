@@ -3,7 +3,7 @@ name: Update Database
 on:
   push:
   schedule:
-    - corn: '0 */4 * * *'
+    - cron: '0 */4 * * *'
 
 
 jobs:
