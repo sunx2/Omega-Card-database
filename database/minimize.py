@@ -12,6 +12,7 @@ for language in ["en","de","fr","es","it","ko","pt","ja"]:
     for i in cards:
         try:
             languagex[i] = data[i]
+            language[i]['ban'] = [banlist[i]['TCG'],banlist[i]['OCG'],banlist[i]['TCG']]
             try:
                 languagex[i]['n'] = data[i]['text'][language]['name']
                 languagex[i]["d"] = data[i]['text'][language]['desc']
