@@ -2,8 +2,6 @@ name: Update Database
 
 on:
   push:
-  schedule:
-    - cron: '0 */4 * * *'
 
 
 jobs:

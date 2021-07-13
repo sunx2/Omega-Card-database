@@ -1,0 +1,1 @@
+# API and Discord bot for YGO Omega Card Database

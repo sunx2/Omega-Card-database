@@ -32,6 +32,18 @@ for language in ["en","de","fr","es","it","ko","pt","ja"]:
             del massive[language][i]['images']
         except:
             break
+    json.dump(massive[language],open(f"database/lang/data-{language}.json","w"),separators=(',',':'))
+
+
+for language in ["en","de","fr","es","it","ko","pt","ja"]:
+    for i in cards:
+        try:
+            del massive[language][i]['setid']
+            del massive[language][i]['alias']
+            del massive[language][i]['ot']
+        except:
+            break
     json.dump(massive[language],open(f"database/lang/data-{language}-min.json","w"),separators=(',',':'))
+
 
 
