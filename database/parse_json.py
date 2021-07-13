@@ -157,7 +157,7 @@ class DataBase(object):
         '''
         d = self.cursor.execute(sql).fetchall()
         
-        json.dump({x[0]:list(x)[1:] for x in d},open("datasets/texts.json",'w'))
+        json.dump({x[0]:list(x)[1:] for x in d},open("database/texts.json",'w'))
         return {x[0]:list(x)[1:] for x in d}
         
     def get_all(self):
