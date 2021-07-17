@@ -11,6 +11,8 @@
    - server32.bin => 32 bit linux 
    - server64.bin => 64 bit linux
 
+- download the data.json file and keep in same folder as server binary.
+
 - Run the application
     - ./server64.exe     => for normal run, server will be created at 
         - 0.0.0.0:8085 => for linux
