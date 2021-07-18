@@ -285,5 +285,12 @@ class DataBase(object):
 
 
 blobs = DataBase()
-json.dump(blobs.get_all(),open("database/data.json",'w'),separators=(',',':'))
+x = blobs.get_all()
+json.dump(x,open("database/data.json",'w'),separators=(',',':'))
 json.dump(blobs.get_banlist(),open("database/banlist.json","w"),separators=(',',':'))
+
+k = {"cards":[]}
+for i in x:
+    k['cards'].append(x[i])
+
+json.dump(k,open("database/data_api.json",'w'),separators=(',',':'))
